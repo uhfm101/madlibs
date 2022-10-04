@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Enter your Words
+  form(method = "POST" action = "/story" id = "words")
+    label(for = "noun1") Noun:
+    input(type = "text" name = "noun1" id = "noun1")
+    br
+    label(for = "noun2") 2nd Noun:
+      input(type = "text" name = "noun2" id = "noun2")
+      br
+    label(for = "verb1") Verb:
+      input(type = "text" name = "verb1" id = "verb1")
+      br
+      label(for = "verb2") 2nd Verb:
+        input(type = "text" name = "verb2" id = "verb2")
+        br
+      label(for = "adjective1") Adjective:
+        input(type = "text" name = "adjective1" id = "adjective1")
+        br
+      label(for = "adjective2")  2nd Adjective:
+        input(type = "text" name = "adjective2" id = "adjective2")
+
+  label(for = "storyChoice") Choose one
+  select(form = "words" name = "storyChoice" id = "storyChoice")
+    option(value = "1") Story 1
+    option(value = "2") Story 2
+    option(value = "3") Story 3
+  br
+  button(type = "submit" form = "words") Tell me a story
