@@ -4,22 +4,22 @@ block content
   h1 Enter your Words
   form(method = "POST" action = "/story" id = "words")
     label(for = "noun1") Noun:
-    input(type = "text" name = "noun1" id = "noun1")
+    input(type = "text" name = "noun1" id = "noun1" placeholder = "Tree")
     br
     label(for = "noun2") 2nd Noun:
-      input(type = "text" name = "noun2" id = "noun2")
+      input(type = "text" name = "noun2" id = "noun2" placeholder = "Walter White")
       br
     label(for = "verb1") Verb:
-      input(type = "text" name = "verb1" id = "verb1")
+      input(type = "text" name = "verb1" id = "verb1" placeholder = "Ate")
       br
       label(for = "verb2") 2nd Verb:
-        input(type = "text" name = "verb2" id = "verb2")
+        input(type = "text" name = "verb2" id = "verb2" placeholder = "Ran")
         br
       label(for = "adjective1") Adjective:
-        input(type = "text" name = "adjective1" id = "adjective1")
+        input(type = "text" name = "adjective1" id = "adjective1" placeholder = "Red")
         br
       label(for = "adjective2")  2nd Adjective:
-        input(type = "text" name = "adjective2" id = "adjective2")
+        input(type = "text" name = "adjective2" id = "adjective2" placeholder = "Hairy")
 
   label(for = "storyChoice") Choose one
   select(form = "words" name = "storyChoice" id = "storyChoice")
