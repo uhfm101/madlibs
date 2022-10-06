@@ -12,9 +12,9 @@ router.post("/story", function(req,res){
   let body = req.body;
   let newStory = getStory(body);
   res.render("story", {
-    newStory: newStory
+    newStory: newStory,
+    color: randomC()
   });
-  color: randomC()
 });
 
 module.exports = router;
@@ -26,6 +26,8 @@ function getStory(formData){
     return generateStory2(formData)
   } else if (formData.storyChoice === "3"){
     return generateStory3(formData)
+  } else if (formData.storyChoice === "4"){
+    return getRandomInt(formData.storyChoice)
   }
   return "invalid";
 }
@@ -48,4 +50,8 @@ function randomC(){
     choice += (Math.round(Math.random() * 15)).toString(16)
   }
   return choice;
+}
+
+function getRandomInt(value){
+  value += ((Math.random()*3))
 }

@@ -8,6 +8,7 @@ a {
 }
 
 p {
-  color: fuchsia;
+  color: #0d1149;
   font-weight: bolder;
+  font-family: "Lucida Handwriting", "Courier New", monospace;
 }
