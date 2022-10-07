@@ -20,16 +20,22 @@ router.post("/story", function(req,res){
 module.exports = router;
 
 function getStory(formData){
+  if (formData.storyChoice === "4"){
+    formData.storyChoice = randomInt();
+  }
   if (formData.storyChoice === "1"){
     return generateStory1(formData);
   } else if (formData.storyChoice === "2"){
     return generateStory2(formData)
   } else if (formData.storyChoice === "3"){
     return generateStory3(formData)
-  } else if (formData.storyChoice === "4"){
-    return getRandomInt(formData.storyChoice)
   }
   return "invalid";
+}
+
+function randomInt(){
+  let value = (Math.round(Math.random()*3)+1).toString()
+  return value;
 }
 
 function generateStory1(formData){
@@ -52,6 +58,3 @@ function randomC(){
   return choice;
 }
 
-function getRandomInt(value){
-  value += ((Math.random()*3))
-}
